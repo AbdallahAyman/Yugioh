@@ -1,3 +1,3 @@
 # Yugioh
 
-Note: Exceptions (errors) appear on console not on a GUI dialogue
+Exceptions thrown for game rules appear on console/terminal not on a GUI dialogue
