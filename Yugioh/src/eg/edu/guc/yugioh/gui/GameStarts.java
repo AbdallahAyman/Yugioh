@@ -65,16 +65,16 @@ public class GameStarts extends JFrame {
 	public GameStarts(Player p12, Player p22) throws NumberFormatException, IOException, UnexpectedFormatException{
 		setSize(1366,768);
 		setTitle("Let's Duel");
-		setLayout(null);
+		//setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		add(new JLabel("Empty JFrame"));
-
+		//add(new JLabel("Empty JFrame"));
 		setUndecorated(true);
-	    setVisible(true);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
+	    	setVisible(true);
 	    
 	    
-	    p1=p12;
-	    p2=p22;
+	    	p1=p12;
+	    	p2=p22;
 
 	        player1=new JLabel("Player1:");
 			player1.setBounds(0,187,180,20);
@@ -97,7 +97,7 @@ public class GameStarts extends JFrame {
 			txt2.setFont(new Font("Courier New", Font.ITALIC, 21));
 			
 			Background=new JLabel();
-			Background.setBounds(0,0,1366,768);
+			//Background.setBounds(0,0,1366,768);
 			Background.setIcon(new ImageIcon("Background.jpg"));
 			
 			cardDescription=new JPanel(/*new ImageIcon(getImage())*/);
@@ -161,12 +161,12 @@ public class GameStarts extends JFrame {
 			getContentPane().add(Background);
 	}
 
-	public static void main(String[] args){
+	/*public static void main(String[] args){
 		Board board = new Board();
 		StartGame m = new StartGame();
 		m.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		m.setVisible(true);
-	}
+	}*/
 	public void updateThisGui(){
 		if(Card.getBoard().isGameOver()){
 			if((p1.getLifePoints()<=0&&p2.getLifePoints()<=0)){
@@ -199,11 +199,10 @@ public class GameStarts extends JFrame {
 						    JOptionPane.INFORMATION_MESSAGE);
 					Object[] selectionValued = {"Play again","Quit game"};
 		    		String initialSelections ="Play again";
-		    		String selection=(String)JOptionPane.showInputDialog(null, "Game Fucking over u fucker",
+		    		String selection=(String)JOptionPane.showInputDialog(null, "Game over",
 	    			        "Action needed", JOptionPane.QUESTION_MESSAGE, null, selectionValued, initialSelections);
 		    		if(selection=="Play again"){
 		    			dispose();
-
 		    			new StartGame();
 		    		}
 		    		else
@@ -220,11 +219,10 @@ public class GameStarts extends JFrame {
 							    JOptionPane.INFORMATION_MESSAGE);
 						Object[] selectionValued = {"Play again","Quit game"};
 			    		String initialSelections ="Play again";
-			    		String selection=(String)JOptionPane.showInputDialog(null, "Game Fucking over u fucker",
+			    		String selection=(String)JOptionPane.showInputDialog(null, "Game over",
 		    			        "Action needed", JOptionPane.QUESTION_MESSAGE, null, selectionValued, initialSelections);
 			    		if(selection=="Play again"){
 			    			dispose();
-
 			    			new StartGame();
 			    		}
 			    		else

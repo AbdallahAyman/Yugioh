@@ -56,7 +56,7 @@ public class phases extends JPanel implements ActionListener {
 	    endTurn.setBorderPainted(true);
 	    endTurn.setForeground(Color.WHITE);
 	    endTurn.addActionListener(this);
-	    currentPhase=new JLabel("Current phase is: "+Card.getBoard().getActivePlayer().getField().getPhase());
+	    currentPhase=new JLabel("Phase is: "+Card.getBoard().getActivePlayer().getField().getPhase());
 	    currentPhase.setBounds(220,350,140,50);
 	    currentPhase.setForeground(Color.WHITE);
 	    activePlayer=new JLabel("Active player is: "+Card.getBoard().getActivePlayer().getName());

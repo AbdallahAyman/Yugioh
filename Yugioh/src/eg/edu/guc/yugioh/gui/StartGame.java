@@ -39,13 +39,15 @@ public class StartGame extends JFrame implements ActionListener {
 		
 
 		setSize(1366,768);
-		setTitle("Ado Yu-Gi-OH");
-		setLayout(null);
+		setTitle("Yu-Gi-OH");
+		//setLayout(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		add(new JLabel("Empty JFrame"));
-
 		setUndecorated(true);
 
+		Background=new JLabel();
+		Background.setIcon(new ImageIcon("Background.jpg"));
+		//Background.setBounds(0,0,1366,768);
+		add(Background);
 		
 
 		Scanner sc=new Scanner(System.in);
@@ -63,11 +65,6 @@ public class StartGame extends JFrame implements ActionListener {
 		txt2=new JTextField();
 		txt2.setBounds(105,180,180,20);
 		
-
-		
-		Background=new JLabel();
-		Background.setBounds(0,0,1366,768);
-		Background.setIcon(new ImageIcon("Background.jpg"));
 		
 		StartTheGame=new JButton("Start Game");
 		StartTheGame.setBounds(570,350,300,100);
